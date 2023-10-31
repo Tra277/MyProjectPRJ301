@@ -1,0 +1,77 @@
+
+/* Show cart */
+.show-cart .show-cart-heading{
+    padding: 0.5rem;
+    border-bottom:  2px solid #fff;
+}
+/* Style the table */
+.show-cart table{
+    width: 100%;
+    border-radius: 5px;
+}
+.show-cart th{
+    background-color: red;
+    border:1px solid red;
+    color: #fff;
+    padding: 0.5rem;
+}
+.show-cart td img{
+    border-radius:5px; 
+    width: 150px;
+}
+.show-cart td{
+    border:1px solid red;
+    margin: 0;
+    text-align: center;
+}
+
+/* css cho input*/
+table input[type="number"]{
+    width: 90px;
+    
+}
+table input[type="submit"]{
+    width: 90px;
+    background-color: red;
+    font-weight: 500;
+    border:1px solid red;
+}
+
+/* Đơn hàng */ 
+.order-detail-heading{
+    padding: 0.2rem;
+    border-bottom: 2px solid #fff;
+}
+
+.order-detail table{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.order-detail th{
+    color: #fff;
+    padding:0.5rem 0 ;
+    text-align: left;
+}
+.order-detail td{
+    padding:5px 0;
+    margin-top: 4px;
+}
+.order-detail-summary{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #fff;
+    padding: 0.5rem 0;
+}
+
+/* Order (khach hang)*/
+.order-heading{
+    padding: 0.2rem;
+    border-bottom: 2px solid #fff;
+}
+
+.checkout input{
+    padding:0.5rem;
+    margin:0.2rem 0; 
+}
+

@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Phần CSS chung */
+
+.mt-32{
+    margin-top: 32px;
+}
+.mt-16{
+    margin-top:32px;
+}
+.mt-8{
+    margin-top: 8px;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background-image:url(../img/spidermandemo.jpg);
+    opacity: 0.9; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+input[type="text"],input[type="password"]{
+    width: 100%;
+    background-color: black;
+    border: 2px solid red;
+    color: white;
+    padding :1rem;
+    border-radius: 7px; 
+}
+
+.loginForm{
+    background-color: black;
+    width:480px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 120px auto 0;
+}
+
+.loginForm h1{
+    text-align: center;
+}
+i{
+    margin-right: 8px; 
+}
+.loginForm button{
+    padding: .8rem 1.5rem;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 8px;
+    background-color: red;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+.loginForm button:hover{
+    opacity: 0.8;
+}
+.loginForm a{
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 16px; 
+}
+
+.loginForm a:hover{
+    background-color: rgba(255,255,255,0.5);
+}

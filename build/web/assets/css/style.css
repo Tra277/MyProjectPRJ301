@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Phần CSS chung */
+
+.mt-32{
+    margin-top: 32px;
+}
+.mt-16{
+    margin-top:32px;
+}
+.mt-8{
+    margin-top: 8px;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background-color: black;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.active{
+    color: black;
+    background-color:red;
+}
+li{
+    list-style: none;
+}
+/* Header */
+.logo img{
+    height: 100%;
+}
+.header {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li {
+    list-style: none;
+    padding: 1rem;
+    height: 100%;
+}
+
+
+
+/* .nav-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+} */
+
+.logout a{
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+
+
+/* .cart a{
+    text-decoration: none;
+    color: #fff;
+} */
+
+/* .about{
+    width: 100%;
+    background-image: url(/assets/);
+} */
+
+/* content */
+/* intro */
+.latest-game{
+    position: relative;
+}
+.latest-game img{
+    width: 100%;
+    border-radius: 10px;
+}
+.latest-game img:hover{
+    opacity: 0.8;
+}
+/* .latest-game a{
+    color: #fff;
+} */
+.latest-game .game-name{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.8);
+    padding: 1rem 1rem;
+    bottom: 4px;
+    border-radius: 10px;
+}
+.game-name .latest-add-to-cart {
+    border-radius: 10px;
+    border: 2px solid #fff;
+    padding: 0.5rem 1rem;
+    color: white;
+    max-width: fit-content;
+}
+.game-name .latest-add-to-cart:hover{
+    background-color:rgba(255,255,255,0.5);
+}
+.latest-game-list li{
+    padding: 1rem 1.5rem;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.latest-game-list li:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+.latest-item {
+    display: flex;
+}
+
+.latest-item div{
+    margin:auto 1rem;
+}
+
+.latest-game-list li img{
+    border-radius:3px ; 
+    width: 40px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Main content */
+/* Phân loại game */
+.Genres li{
+    width: 100%;
+    padding: 0.5rem;
+    border-bottom: 1px white solid;
+}
+.Genres li a{
+    width: 100%;
+    display: block;
+}
+.Genres li:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+/* Search */
+.search-bar-form{
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px red solid;
+}
+input{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: black;
+    color: #fff;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+input[type="submit"]{
+    cursor: pointer;
+    padding: .5rem;
+}
+input[type="submit"]:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+/* Display game */
+.list-game-title h1{
+    border-bottom:2px #fff solid;
+}
+.display-game-item{
+    padding: 0.5rem;
+    border-radius: 10px;
+    height: 100%;
+}
+.display-game-item:hover{
+    background-color: rgba(255,255,255,0.5);
+    
+}
+.display-game-item .game-item-content{
+    padding: 0.5rem;
+    line-height: 1.8;
+}
+.game-item-content .description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+.game-item-img img{
+     width: 100%;
+     border-radius: 10px;
+}
+/* Footer */
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px #fff solid;
+    padding: 3rem ;
+}
+
+.social-app{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.copyright a{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+.copyright a:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+
+/* Responsive cho trang web*/
+/* Mobilde and tablet */
+@media only screen and  (max-width:1023px) {
+    footer{
+        flex-direction: column
+    }
+    
+}
+

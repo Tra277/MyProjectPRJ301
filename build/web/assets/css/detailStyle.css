@@ -1,0 +1,54 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 21, 2023, 10:55:05 PM
+    Author     : alexf
+*/
+img:hover{
+    opacity: 0.8;
+}
+/* CSS cho DETAIL */
+.display-game-detail .detail-game-title{
+    padding: 0 0 0 .5rem;
+    border-bottom: 2px solid #fff;
+}
+
+.display-game-detail .detail-game-img img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.display-game-detail .detail-logo{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.display-game-detail .detail-logo img{
+    width: 100%;
+}
+.buyNow{
+    display: block;
+    padding: 1rem 1rem;
+    border-radius: 6px;
+    background-color: red;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.buyNow:hover{
+    opacity: 0.6;
+}
+
+.addToCart{
+    display: block;
+    padding: 1rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    text-align: center;
+    margin-top: 16px;
+}
+.addToCart:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+

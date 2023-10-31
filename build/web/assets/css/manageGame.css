@@ -1,0 +1,55 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 27, 2023, 10:33:27 PM
+    Author     : alexf
+*/
+.manage-game{
+    border: 2px solid red;
+    padding:0.5rem;
+    border-radius: 8px;
+}
+/* table-header*/
+
+.game-manager-header{
+    padding: 0.5rem;
+    display: flex;
+    border-bottom: 2px solid #fff;
+    justify-content: space-between;
+}
+.general-action{
+    display: flex;
+}
+.general-action a{
+    display: block;
+    padding: 0.5rem;
+    border-radius:5px;
+    background-color: red; 
+    margin-right: 5px; 
+}
+.general-action a i{
+    margin-right: 5px; 
+}
+/* Style the table */
+table{
+    width: 100%;
+}
+td img{
+    width: 300px;
+}
+td{
+    text-align: center;
+}
+
+/* Go to home*/
+.go-to-home a{
+    display: block;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius:5px;
+    background-color: red; 
+    margin-right: 5px; 
+}
+
