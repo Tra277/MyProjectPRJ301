@@ -27,12 +27,15 @@
             }
         %>
         <div class="container">
+            <h3 style="color: red">${requestScope.msg}</h3>
             <div class="row">
                 <div class="mt-32 col-md-8">
                     <div class="show-cart">
                         <div class="show-cart-heading">
                             <h1>Giỏ hàng <i class="fa-solid fa-cart-shopping fa-sm" style="color: #ffffff;"></i></h1>
+                            <a href="cart?service=deleteAllCart"><i class="fa-solid fa-trash fa-sm" style="color: #ffffff;"></i>Delete all cart</a>
                         </div>
+                        
                         <div class="mt-8 show-cart-table">
                             <div class="mt-8"></div>
                             <table>
@@ -113,12 +116,15 @@
                             <h1>Thông tin khách hàng</h1>
                         </div>
                         <div class="order-form mt-8">
-                            <form>
-                                <input placeholder="Tên khách hàng" type="text" name="name"/>
-                                <input placeholder="Địa chỉ khách hàng" type="text" name="address"/>
-                                <input placeholder="Số điện thoại" type="text" name="phone"/>
+                            <form action="checkout" method="post">
+                                <input required placeholder="Tên khách hàng" type="text" name="name"/>
+                                <input required placeholder="Địa chỉ khách hàng" type="text" name="address"/>
+                                <input required placeholder="Số điện thoại" type="text" name="phone"/>
                                 <hr>
+                                
                                 <input type="submit" value="Đặt hàng"/>
+                                
+                                
                             </form>
                         </div>
                         

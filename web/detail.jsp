@@ -44,7 +44,7 @@
                                             <div class="detail-price">
                                                 <p>$${gd.price}</p>
                                             </div>
-                                            <a href="" class="buyNow">BUY NOW</a>
+                                            
                                             <a href="cart?service=addToCart&id=${gd.gameID}" class="addToCart">Add to Cart</a>
                                         </div>
                                             

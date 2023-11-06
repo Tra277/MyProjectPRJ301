@@ -75,6 +75,7 @@ public class accountController extends HttpServlet {
                     request.getRequestDispatcher("login.jsp").forward(request, response);
                 } else {
                     session.setAttribute("user", acc);
+                    session.removeAttribute("gameCart");
                     response.sendRedirect("home");
                 }
             }

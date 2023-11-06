@@ -4,6 +4,7 @@
  */
 package controller;
 
+import entity.Account;
 import entity.Game;
 import entity.GameCart;
 import java.io.IOException;
@@ -38,6 +39,7 @@ public class cartController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             HttpSession session = request.getSession();
+            Account a = (Account) session.getAttribute("user");
             String service = request.getParameter("service");
             if (service == null) {
                 service = "showCart";
@@ -50,21 +52,30 @@ public class cartController extends HttpServlet {
                 Game game = daoGame.getGame("select * from Games where GameID = " + id).get(0);
                 HashMap<Integer, GameCart> listCart = (HashMap<Integer, GameCart>) session.getAttribute("gameCart");
                 //session chua duoc luu
-                if (listCart == null) {
+                if (a != null && a.getIsAdmin() == 1) {
+                    String checkoutErr = "Admin can not add to Cart";
+                    response.sendRedirect("home?loadWebsite&error=" + checkoutErr);
+                }else if (listCart == null) {
                     listCart = new HashMap<Integer, GameCart>();
                     gameCart = new GameCart(game, 1);
                     listCart.put(id, gameCart);
+                    session.setAttribute("gameCart", listCart);
+                    request.getRequestDispatcher("showCart.jsp").forward(request, response);
                 } else {
                     if (listCart.containsKey(id)) {
                         gameCart = listCart.get(id);
                         gameCart.quantityIncrement();
+                        session.setAttribute("gameCart", listCart);
+                        request.getRequestDispatcher("showCart.jsp").forward(request, response);
                     } else {
                         gameCart = new GameCart(game, 1);
                         listCart.put(id, gameCart);
+                        session.setAttribute("gameCart", listCart);
+                        request.getRequestDispatcher("showCart.jsp").forward(request, response);
                     }
+
                 }
-                session.setAttribute("gameCart", listCart);
-                request.getRequestDispatcher("showCart.jsp").forward(request, response);
+
             }
             if (service.equals("showCart")) {
                 HashMap<Integer, GameCart> listCart = (HashMap<Integer, GameCart>) session.getAttribute("gameCart");
@@ -99,6 +110,12 @@ public class cartController extends HttpServlet {
                 } catch (Exception e) {
                     System.out.println(e);
                 }
+            }
+            if(service.equals("deleteAllCart")){
+                HashMap<Integer, GameCart> listCart = (HashMap<Integer, GameCart>) session.getAttribute("gameCart");
+                listCart.clear();
+                session.setAttribute("gameCart", listCart);
+                request.getRequestDispatcher("showCart.jsp").forward(request, response);
             }
             if (service.equals("deleteCart")) {
                 String gid_raw = request.getParameter("gid");

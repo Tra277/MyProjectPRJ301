@@ -13,6 +13,10 @@
 
     <body>
         <jsp:include page="Component/header.jsp"></jsp:include>
+        <div class="container">
+            <h3 style="color: red;">${requestScope.error}</h3>
+        </div>
+        
         <jsp:include page="Component/latestGame.jsp"></jsp:include>
 
             <div class="main-content mt-32">
@@ -37,7 +41,15 @@
                                                     <div class="game-item-content">
                                                         <h2>${i.name}</h2>
                                                         <p class="description">${i.description}</p>
-                                                        <h3>$${i.price}</h3>
+                                                        <c:choose>
+                                                            <c:when test="${i.price>0}">
+                                                                <h3>$${i.price}</h3>
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                <h3>Free</h3>
+                                                            </c:otherwise>
+                                                        </c:choose>
+                                                        
                                                         <div class="add-to-cart">
 
                                                         </div>

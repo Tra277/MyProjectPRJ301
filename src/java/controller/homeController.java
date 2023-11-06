@@ -46,12 +46,14 @@ public class homeController extends HttpServlet {
             DAOGame daoGame = new DAOGame();
             DAOGenre daoGenre = new DAOGenre();
             HttpSession session = request.getSession();
+            
             if (service == null) {
                 service = "loadWebsite";
             }
             if (service.equals("loadWebsite")) {
                 /* latest game */
                 String msg = request.getParameter("message");
+                String err = request.getParameter("error");
                 if (msg == null) {
                     msg = "";
                 }
@@ -77,7 +79,7 @@ public class homeController extends HttpServlet {
                 /*select genre*/
                 Vector<Genre> listGenre = daoGenre.getGenre("select * from Genres");
                 request.setAttribute("listGenre", listGenre);
-                
+                request.setAttribute("error", err);
                 request.getRequestDispatcher("home.jsp").forward(request, response);
             }
             if (service.equals("selectLatest")) {
